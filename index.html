@@ -18,8 +18,11 @@
             const city = urlParams.get('city'); // Default: Empty
             const refresh = urlParams.get('refresh'); // Default: 1800
             const category = urlParams.get('category'); // Default: Empty
-            const resolution = urlParams.get('resolution'); // Default: 1920x1080
-            const where = urlParams.get('where'); // Default: topleft
+            const width = urlParams.get('width'); // Default: 1080
+            const height = urlParams.get('height'); // Default: 1920
+            const widget = urlParams.get('widget'); // Default: topleft
+
+            const resolution = width+"x"+height; // Default: 1920x1080
 
             // Logs
             console.log(queryString);
@@ -27,18 +30,18 @@
             console.log("city: "+city);
             console.log("refresh: "+refresh);
             console.log("category: "+category);
+            console.log("width: "+width);
+            console.log("height: "+height);
+            console.log("widget: "+widget);
             console.log("resolution: "+resolution);
-            console.log("where: "+where);
 
             // Iframe Variables
             const unsplash = "https://source.unsplash.com/random/";
             const wttr = "https://wttr.in/";
 
-            //const unsplashc = unsplash+resolutionf+"?"+category;
             const wttrc = wttr+city+"?lang="+lang+"&background=000000";
 
             // Logs
-            //console.log("Unsplash Link: "+unsplashc);
             console.log("Wttr.in Link: "+wttrc);
 
 
@@ -69,7 +72,6 @@
             }
             
             // Insert links into iframes
-            //document.getElementById("unsplashi").src = unsplashc;
             document.getElementById("wttri").src = wttrc;
 
 
