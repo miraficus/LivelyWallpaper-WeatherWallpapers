@@ -1,8 +1,8 @@
 # LivelyWallpaper-WeatherWallpapers
 Basically a website that gets pictures from Unsplash and then overlays Wttr.in over it.
 
-[Website](https://miraficus.github.io/LivelyWallpaper-WeatherWallpapers/)
-[Website with URL parameters](https://miraficus.github.io/LivelyWallpaper-WeatherWallpapers/?lang=cs&lcity=Brno&refresh=1800&category=nature&resolution=1920x1080&where=topleft)
+- [Website](https://miraficus.github.io/LivelyWallpaper-WeatherWallpapers/)
+- [Website with URL parameters](https://miraficus.github.io/LivelyWallpaper-WeatherWallpapers/?lang=cs&lcity=Brno&refresh=1800&category=nature&resolution=1920x1080&where=topleft)
 
 ## TODO
 ### Add URL parameters.
