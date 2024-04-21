@@ -41,6 +41,9 @@
             console.log("Unsplash Link: "+unsplashc);
             console.log("Wttr.in Link: "+wttrc);
 
+            // Insert links into iframes
+            document.getElementById('unsplash').src = unsplashc;
+            document.getElementById('unsplash').src = wttrc;
 
 
 
@@ -48,11 +51,11 @@
     </head>
     <body>
         <div class="tapeta-div">
-            <iframe class="tapeta" src="https://source.unsplash.com/random/1920x1080?nature"></iframe>
+            <iframe id="unsplash" class="tapeta" src="about:blank"></iframe> <!-- https://source.unsplash.com/random/1920x1080?nature -->
             </iframe>
         </div>
         <div class="hodiny-div">
-            <iframe scrolling="no" class="hodiny" src="https://wttr.in/Brno?lang=cs&background=000000" allowtransparency = "true"></iframe>
+            <iframe scrolling="no" id="wttr" class="hodiny" src="about:blank" allowtransparency = "true"></iframe> <!-- https://wttr.in/Brno?lang=cs&background=000000 -->
             </iframe>
         </div>
     </body>
