@@ -41,9 +41,6 @@
             console.log("Unsplash Link: "+unsplashc);
             console.log("Wttr.in Link: "+wttrc);
 
-            // Insert links into iframes
-            document.getElementById("unsplashi").src = unsplashc;
-            document.getElementById("wttri").src = wttrc;
 
 
         </script>
@@ -57,5 +54,10 @@
             <iframe scrolling="no" id="wttri" class="hodiny" src="https://wttr.in/" allowtransparency = "true"></iframe> <!-- https://wttr.in/Brno?lang=cs&background=000000 -->
             </iframe>
         </div>
+        <script type="text/javascript">
+            // Insert links into iframes
+            document.getElementById("unsplashi").src = unsplashc;
+            document.getElementById("wttri").src = wttrc;
+        </script>
     </body>
 </html>        
