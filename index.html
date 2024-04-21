@@ -21,12 +21,6 @@
             const resolution = urlParams.get('resolution'); // Default: 1920x1080
             const where = urlParams.get('where'); // Default: topleft
 
-            if (resolution == null) {
-                var resolutionf = "1920x1080";
-            } else {
-                var resolutionf = resolution;
-            }
-
             // Logs
             console.log(queryString);
             console.log("lang: "+lang);
@@ -40,11 +34,11 @@
             const unsplash = "https://source.unsplash.com/random/";
             const wttr = "https://wttr.in/";
 
-            const unsplashc = unsplash+resolutionf+"?"+category;
+            //const unsplashc = unsplash+resolutionf+"?"+category;
             const wttrc = wttr+city+"?lang="+lang+"&background=000000";
 
             // Logs
-            console.log("Unsplash Link: "+unsplashc);
+            //console.log("Unsplash Link: "+unsplashc);
             console.log("Wttr.in Link: "+wttrc);
 
 
@@ -61,9 +55,22 @@
             </iframe>
         </div>
         <script type="text/javascript">
+            // Check if null
+            if (resolution == null) {
+                const resolutionf = "1920x1080";
+                const unsplashc = unsplash+resolutionf+"?"+category;
+                document.getElementById("unsplashi").src = unsplashc;
+            } else {
+                const resolutionf = resolution;
+                const unsplashc = unsplash+resolutionf+"?"+category;
+                document.getElementById("unsplashi").src = unsplashc;
+            }
+            
             // Insert links into iframes
-            document.getElementById("unsplashi").src = unsplashc;
+            //document.getElementById("unsplashi").src = unsplashc;
             document.getElementById("wttri").src = wttrc;
+
+
         </script>
     </body>
 </html>        
