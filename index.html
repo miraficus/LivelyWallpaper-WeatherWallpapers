@@ -14,12 +14,18 @@
             // URL Parameter Variables
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
-            const lang = urlParams.get('lang'); // Default: cs
-            const city = urlParams.get('city'); // Default: Brno
+            const lang = urlParams.get('lang'); // Default: Empty
+            const city = urlParams.get('city'); // Default: Empty
             const refresh = urlParams.get('refresh'); // Default: 1800
-            const category = urlParams.get('category'); // Default: nature
+            const category = urlParams.get('category'); // Default: Empty
             const resolution = urlParams.get('resolution'); // Default: 1920x1080
             const where = urlParams.get('where'); // Default: topleft
+
+            if (resolution == null) {
+                const resolutionf = "1920x1080";
+            } else {
+                const resolutionf = resolution;
+            }
 
             // Logs
             console.log(queryString);
@@ -34,7 +40,7 @@
             const unsplash = "https://source.unsplash.com/random/";
             const wttr = "https://wttr.in/";
 
-            const unsplashc = unsplash+resolution+"?"+category;
+            const unsplashc = unsplash+resolutionf+"?"+category;
             const wttrc = wttr+city+"?lang="+lang+"&background=000000";
 
             // Logs
@@ -47,7 +53,7 @@
     </head>
     <body>
         <div class="tapeta-div">
-            <iframe id="unsplashi" class="tapeta" src="https://source.unsplash.com/random/"></iframe> <!-- https://source.unsplash.com/random/1920x1080?nature -->
+            <iframe id="unsplashi" class="tapeta" src="https://source.unsplash.com/random/1920x1080"></iframe> <!-- https://source.unsplash.com/random/1920x1080?nature -->
             </iframe>
         </div>
         <div class="hodiny-div">
