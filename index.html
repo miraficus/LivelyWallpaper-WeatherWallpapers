@@ -11,28 +11,36 @@
         <meta http-equiv="refresh" content="1800">
         <script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>
         <script type="text/javascript">
+            // URL Parameter Variables
             const queryString = window.location.search;
-            console.log(queryString);
-
             const urlParams = new URLSearchParams(queryString);
+            const lang = urlParams.get('lang'); // Default: cs
+            const city = urlParams.get('city'); // Default: Brno
+            const refresh = urlParams.get('refresh'); // Default: 1800
+            const category = urlParams.get('category'); // Default: nature
+            const resolution = urlParams.get('resolution'); // Default: 1920x1080
+            const where = urlParams.get('where'); // Default: topleft
 
-            const lang = urlParams.get('lang')
-            console.log("lang"+lang);
+            // Logs
+            console.log(queryString);
+            console.log("lang: "+lang);
+            console.log("city: "+city);
+            console.log("refresh: "+refresh);
+            console.log("category: "+category);
+            console.log("resolution: "+resolution);
+            console.log("where: "+where);
 
-            const city = urlParams.get('city')
-            console.log("city"+city);
+            // Iframe Variables
+            const unsplash = "https://source.unsplash.com/random/";
 
-            const refresh = urlParams.get('refresh')
-            console.log("refresh"+refresh);
 
-            const category = urlParams.get('category')
-            console.log("category"+category);
+
 
         </script>
     </head>
     <body>
         <div class="tapeta-div">
-            <iframe class="tapeta" src="https://source.unsplash.com/random/1920x1080?landcape"></iframe>
+            <iframe class="tapeta" src="https://source.unsplash.com/random/1920x1080?nature"></iframe>
             </iframe>
         </div>
         <div class="hodiny-div">
